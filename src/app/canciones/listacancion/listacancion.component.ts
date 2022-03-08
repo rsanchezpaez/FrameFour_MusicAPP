@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { CancionModelo } from '../modelos/cancion.modelo';
 import { DatosCanciones } from '../modelos/datoscanciones';
-
 @Component({
   selector: 'app-listacancion',
   templateUrl: './listacancion.component.html',

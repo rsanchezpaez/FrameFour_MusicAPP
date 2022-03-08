@@ -3,17 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CancionesModulo } from './canciones/cancion.modulo';
-
+import { CancionComponent } from './cancion/cancion.component';
+import { ListacancionComponent } from './canciones/listacancion/listacancion.component';
 @NgModule({
   declarations: [
     AppComponent,
+    CancionComponent,
+    ListacancionComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CancionesModulo
   ],
   providers: [],
   bootstrap: [AppComponent]

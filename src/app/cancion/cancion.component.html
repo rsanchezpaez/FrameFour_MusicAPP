@@ -1,0 +1,12 @@
+<div class="lista" *ngIf="cancion_individual">
+    <h2>{{cancion_individual.titulo}}</h2>
+    <table>
+        <tr>
+            <td><img src="/assets/{{cancion_individual.caratula}}"/></td>
+            <td style="vertical-align:top; " ><br /><br /><br /><b>{{cancion_individual.autor}}</b>
+            <br />{{cancion_individual.disco}}          
+            <br /> {{cancion_individual.estilo}}<br /><br /><br />
+            </td>
+        </tr>
+    </table>           
+</div>

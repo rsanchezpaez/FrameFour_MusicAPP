@@ -8,16 +8,4 @@
     </div>
 </div>
 
-
-  <div class="lista" *ngIf="cancion_selecionada">
-      <h2>{{cancion_selecionada.titulo}}</h2>
-      <table>
-          <tr>
-              <td><img src="/assets/{{cancion_selecionada.caratula}}"/></td>
-              <td style="vertical-align:top; " ><br /><br /><br /><b>{{cancion_selecionada.autor}}</b>
-              <br />{{cancion_selecionada.disco}}          
-              <br /> {{cancion_selecionada.estilo}}<br /><br /><br />
-              </td>
-          </tr>
-      </table>           
-  </div>
+<app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
