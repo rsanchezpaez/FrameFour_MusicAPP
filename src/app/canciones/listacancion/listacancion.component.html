@@ -1,11 +1,28 @@
-<div class="contenedor">
-    <div class="cancion-contenedor" *ngFor="let cancion of canciones;" (click)="ngDocheck(cancion)">
-      <span>{{cancion.titulo}}</span>
-      <span>{{cancion.autor}}</span>
-      <span>
-        <a>play</a>
-      </span>
-    </div>
-</div>
+<div>
+  <div style="width:50%;display: inline-block;">
+  <table datatable class="row-border hover">
 
+  <thead>
+      <tr>
+          <th>Año</th>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Estilo</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cancion of canciones"  (click)="ngDocheck(cancion)">
+      <td>{{cancion.anio}}</td>
+      <td>{{cancion.titulo}}</td>
+      <td>{{cancion.autor}}</td>
+      <td>{{cancion.estilo}}</td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+<div style="display:inline-block;vertical-align: top;">
 <app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
+</div></div>
+
+

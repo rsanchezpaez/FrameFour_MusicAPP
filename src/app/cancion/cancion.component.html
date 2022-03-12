@@ -1,12 +1,13 @@
-<div class="lista" *ngIf="cancion_individual">
-    <h2>{{cancion_individual.titulo}}</h2>
-    <table>
-        <tr>
-            <td><img src="/assets/{{cancion_individual.caratula}}"/></td>
-            <td style="vertical-align:top; " ><br /><br /><br /><b>{{cancion_individual.autor}}</b>
-            <br />{{cancion_individual.disco}}          
-            <br /> {{cancion_individual.estilo}}<br /><br /><br />
-            </td>
-        </tr>
-    </table>           
+<div>
+<div class="card"  style="right:-20px;width: 18rem;" *ngIf="cancion_individual">
+
+        <img class="card-img-top" src="/assets/{{cancion_individual.caratula}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{cancion_individual.titulo}}</h5>
+          <p class="card-text">{{cancion_individual.autor}}</p>
+          <p class="card-text">{{cancion_individual.disco}}</p>
+          <p class="card-text">{{cancion_individual.estilo}}</p>
+          <a href="#" (click)=cerrar() class="btn btn-primary">Cerrar</a>
+        </div>
+</div>
 </div>
