@@ -6,7 +6,8 @@ export class CancionModelo{
       public anio: number,
       public disco: string,
       public estilo: string,
-      public caratula:string, 
+      public caratula:string,
+      public discografica: string,
       
     ) { }
 }
