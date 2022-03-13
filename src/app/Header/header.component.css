@@ -1,0 +1,88 @@
+.site-header{
+    background: black;
+    background-size: cover;
+    background-position: center center;
+    max-height: fit-content;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img, h2{
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-between;
+    margin-left: 1em;
+    width: 35px; 
+    height: 35px;
+}
+
+.tituloPrincipal{
+    color: white;
+    font-family: sans-serif;
+    margin-left: 1em;
+    padding-right: 200px;
+}
+
+.iconoMessenger{
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-between;
+    padding-left: 120px;
+}
+
+.loginDetail{
+    color: white;
+    font-family: sans-serif;
+    display: inline;
+    float: right;
+    margin-right: 1em;
+}
+
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.input-search{
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    background-color: white;
+    padding-right: 40px;
+    color: black;
+}
+
+
+.btn-search{
+    width: 70px;
+    height: 70px;
+    border-style: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:white;
+    background-color: black;
+    pointer-events: painted;  
+    border-bottom:1px solid rgba(255,255,255,.5);
+}
+
