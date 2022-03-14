@@ -11,6 +11,17 @@ export class CancionComponent implements OnInit {
 cerrar(): void {
   delete this.cancion_individual;
 }
+reproducir(funcion:string): void {
+  var audio = new Audio();
+  audio.src = "../assets/sample-15s.mp3";
+  audio.load();
+  if (funcion=="detener"){audio.pause();}
+  else{
+    audio.play();
+  }
+
+  }
+
   ngOnInit(): void {
   }
 

@@ -8,6 +8,8 @@ import { HeaderComponent } from 'src/app/Header/header.component';
   styleUrls: ['./listacancion.component.css']
 })
 export class ListacancionComponent{
+  searchText = '';
+  searchField = '';
   public canciones=DatosCanciones;
   public cancion_selecionada?:CancionModelo;
   public favorito:boolean=false;
@@ -15,6 +17,7 @@ export class ListacancionComponent{
   }
 
   ngOnInit(): void {
+    this.searchField = 'autor'; 
   }
   
 

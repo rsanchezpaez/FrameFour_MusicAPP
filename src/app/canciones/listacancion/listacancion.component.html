@@ -1,28 +1,39 @@
-<div style="margin-top:50px;margin-left:20px">
-  <div style="width:50%;display: inline-block;">
-  <table datatable class="row-border hover">
+<div style="margin-top:20px;margin-left:20px">
+<div class="content" role="main">
+  <div class="card" style="width: 50%; border-width: 0px;">
+    <div class="form-inline" style="width: 50%; border-width: 0px;">
 
-  <thead>
-      <tr>
-          <th>Año</th>
-          <th>Titulo</th>
-          <th>Autor</th>
-          <th>Estilo</th>
+      <select  class="form-control" [(ngModel)]="searchField" [value]='searchField' required><option value="">Elija campo de búsqueda</option><option selected="true"  value="autor">Autor</option><option value="titulo">Titulo</option></select>
+      <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]="searchText" placeholder="Escriba texto a buscar" 
+        autofocus>
+    </div>
+    </div>
+    <div style="margin-top:20px;width:50%;display: inline-block;">
+    <table datatable class="row-border hover">
+
+      <thead>
+          <tr>
+              <th>Año</th>
+              <th>Titulo</th>
+              <th>Autor</th>
+              <th>Estilo</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cancion of canciones | listafilter: searchText:searchField"  (click)="ngDocheck(cancion)">
+          <td>{{cancion.anio}}</td>
+          <td>{{cancion.titulo}}</td>
+          <td>{{cancion.autor}}</td>
+          <td>{{cancion.estilo}}</td>
       </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let cancion of canciones"  (click)="ngDocheck(cancion)">
-      <td>{{cancion.anio}}</td>
-      <td>{{cancion.titulo}}</td>
-      <td>{{cancion.autor}}</td>
-      <td>{{cancion.estilo}}</td>
-  </tr>
-</tbody>
-
-</table>
+      </tbody>
+      </table>
+      </div>
+      <div style="display:inline-block;vertical-align: top;">
+        <app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
+        </div>
+  </div>
 </div>
-<div style="display:inline-block;vertical-align: top;">
-<app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
-</div></div>
 
 

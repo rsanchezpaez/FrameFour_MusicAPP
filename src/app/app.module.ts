@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/header.component';
 import { CancionComponent } from './cancion/cancion.component';
 import { ListacancionComponent } from './canciones/listacancion/listacancion.component';
+import { FilterPipe } from './filter.pipe';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     CancionComponent,
     ListacancionComponent,
-    HeaderComponent
+    HeaderComponent,
+    FilterPipe
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
