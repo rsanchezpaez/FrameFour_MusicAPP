@@ -10,7 +10,8 @@ import { ListacancionComponent } from './canciones/listacancion/listacancion.com
   declarations: [
     AppComponent,
     CancionComponent,
-    ListacancionComponent
+    ListacancionComponent,
+    HeaderComponent
    
   ],
   imports: [
