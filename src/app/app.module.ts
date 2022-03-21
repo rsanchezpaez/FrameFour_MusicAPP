@@ -8,13 +8,15 @@ import { CancionComponent } from './cancion/cancion.component';
 import { ListacancionComponent } from './canciones/listacancion/listacancion.component';
 import { FilterPipe } from './filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 @NgModule({
   declarations: [
     AppComponent,
     CancionComponent,
     ListacancionComponent,
     HeaderComponent,
-    FilterPipe
+    FilterPipe,
+    ReproductorComponent
    
   ],
   imports: [

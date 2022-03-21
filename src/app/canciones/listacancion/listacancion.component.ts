@@ -12,6 +12,7 @@ export class ListacancionComponent{
   searchField = '';
   public canciones=DatosCanciones;
   public cancion_selecionada?:CancionModelo;
+  public cancion_reproductor?:CancionModelo;
   public favorito:boolean=false;
   constructor() {    
   }
@@ -24,6 +25,9 @@ export class ListacancionComponent{
   ngDocheck(cancion: CancionModelo){
    this.cancion_selecionada=cancion; 
   }
+  ngDoplay(cancion: CancionModelo){
+    this.cancion_reproductor=cancion; 
+   }
   megusta(){
     this.favorito=true;
   }

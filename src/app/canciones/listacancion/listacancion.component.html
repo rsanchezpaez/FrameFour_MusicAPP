@@ -18,22 +18,28 @@
               <th>Titulo</th>
               <th>Autor</th>
               <th>Estilo</th>
+              <th>Reproductor</th>
           </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let cancion of canciones | listafilter: searchText:searchField"  (click)="ngDocheck(cancion)">
-          <td>{{cancion.anio}}</td>
-          <td>{{cancion.titulo}}</td>
-          <td>{{cancion.autor}}</td>
-          <td>{{cancion.estilo}}</td>
+        <tr *ngFor="let cancion of canciones | listafilter: searchText:searchField">
+          <td  (click)="ngDocheck(cancion)">{{cancion.anio}}</td>
+          <td  (click)="ngDocheck(cancion)">{{cancion.titulo}}</td>
+          <td  (click)="ngDocheck(cancion)">{{cancion.autor}}</td>
+          <td  (click)="ngDocheck(cancion)">{{cancion.estilo}}</td>
+          <td (click)="ngDoplay(cancion)"><i class="fa fa-play-circle fa-3x"></i></td>
       </tr>
       </tbody>
       </table>
       </div>
-      <div style="display:inline-block;vertical-align: top;">
+      <div style="display:inline-block;;width:25%;vertical-align: top;">
         <app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
         </div>
+        <div style="display:inline-block;;width:25%;vertical-align: top;">
+          <app-reproductor *ngIf="cancion_reproductor" src="{{cancion_reproductor.fichero}}" titulo="{{cancion_reproductor.titulo}}" autor="{{cancion_reproductor.autor}}" disco="{{cancion_reproductor.disco}}"></app-reproductor>
+          </div>
   </div>
+
 </div>
 
 

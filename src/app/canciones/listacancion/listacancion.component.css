@@ -37,5 +37,7 @@ body {
     text-decoration: none;
     color: #4c4c4c;
   }  
-
+.dataTables_filter{
+  visibility: hidden;
+}
 
