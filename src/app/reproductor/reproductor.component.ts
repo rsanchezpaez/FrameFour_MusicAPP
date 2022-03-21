@@ -54,14 +54,19 @@ export class ReproductorComponent implements AfterViewInit {
   }
   public play(): void {
     if (this.audio) {
+      console.log( this._audioRef.nativeElement);
+      console.log( this.audio);
+      this.audio = this._audioRef.nativeElement;
+      if (this.audio) {
       if (this.audio.readyState >= 2) {
         this.audio.play();
         this.audioStateLabel = 'Playing...'
       }
     }
+    }
   }
-
-  public ngAfterViewInit() {
+  public ngAfterViewInit(): void {
+    
     this.audio = this._audioRef.nativeElement;
     if (this.audio) {   
 
@@ -87,6 +92,5 @@ export class ReproductorComponent implements AfterViewInit {
 
         }
     }
-  
 
 }

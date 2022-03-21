@@ -1,10 +1,10 @@
 <div style="margin-top:20px;margin-left:20px">
 <div class="content" role="main">
   <div class="card" style="width: 50%; border-width: 0px;">
-    <div class="form-inline" style="width: 50%; border-width: 0px;">
-
-      <select  class="form-control" [(ngModel)]="searchField" [value]='searchField' required><option value="">Elija campo de búsqueda</option><option selected="true"  value="autor">Autor</option><option value="titulo">Titulo</option></select>
-      <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+    <div class="form-inline" style="width: 100%; border-width: 0px;">
+      
+      Campo: <select [(ngModel)]="searchField" [value]='searchField' required><option value="">Elija campo de búsqueda</option><option selected="true"  value="autor">Autor</option><option value="titulo">Titulo</option></select>
+      Texto: <input type="email" id="search-text" aria-describedby="search-text" 
         [(ngModel)]="searchText" placeholder="Escriba texto a buscar" 
         autofocus>
     </div>
