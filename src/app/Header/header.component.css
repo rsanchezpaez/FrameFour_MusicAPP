@@ -9,7 +9,7 @@
     width: 100vw;
     height: 30vh;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 

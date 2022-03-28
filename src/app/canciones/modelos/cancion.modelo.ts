@@ -8,6 +8,7 @@ export class CancionModelo{
       public estilo: string,
       public caratula:string,
       public discografica: string,
+      public fichero: string,
       
     ) { }
 }

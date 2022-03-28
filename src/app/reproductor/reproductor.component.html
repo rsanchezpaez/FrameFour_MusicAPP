@@ -1,0 +1,30 @@
+<div>
+    <div class="card"  style="right:-20px;width: 18rem;" *ngIf="src">
+            <div class="card-body">
+              <h5 class="card-title">{{titulo}}</h5>
+              <p class="card-text">{{autor}}</p>
+              <p class="card-text">{{disco}}</p>
+              <audio #audioElement src="http://localhost:4200/assets/{{src}}">
+                <p>Your browser does not support HTML5 audio. Here is a <a href="{{src}}">link</a> instead.</p>
+              </audio>
+              <div class="hp_slide">
+                <div class="hp_range"></div>
+           </div>
+           <div><span #momento value="0"></span></div>
+           
+           <progress #file id="file" max="100" value="0"></progress>
+           <br />
+              <span (click)="play()">
+                <i class="fa fa-play-circle fa-3x"></i>
+              </span>&nbsp;&nbsp;
+              <span (click)="pause()">
+                <i class="fa fa-pause-circle fa-3x"></i>
+              </span>&nbsp;&nbsp;
+              <span (click)="stop()">
+                <i class="fa fa-stop-circle fa-3x"></i>
+              </span>
+            </div>
+    </div>
+    </div>
+    
+

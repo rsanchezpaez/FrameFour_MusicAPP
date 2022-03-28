@@ -1,28 +1,45 @@
-<div>
-  <div style="width:50%;display: inline-block;">
-  <table datatable class="row-border hover">
+<div style="margin-top:20px;margin-left:20px">
+<div class="content" role="main">
+  <div class="card" style="width: 50%; border-width: 0px;">
+    <div class="form-inline" style="width: 100%; border-width: 0px;">
+      
+      Campo: <select [(ngModel)]="searchField" [value]='searchField' required><option value="">Elija campo de búsqueda</option><option selected="true"  value="autor">Autor</option><option value="titulo">Titulo</option></select>
+      Texto: <input type="email" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]="searchText" placeholder="Escriba texto a buscar" 
+        autofocus>
+    </div>
+    </div>
+    <div style="margin-top:20px;width:50%;display: inline-block;">
+    <table datatable class="row-border hover">
 
-  <thead>
-      <tr>
-          <th>Año</th>
-          <th>Titulo</th>
-          <th>Autor</th>
-          <th>Estilo</th>
+      <thead>
+          <tr>
+              <th>Año</th>
+              <th>Titulo</th>
+              <th>Autor</th>
+              <th>Estilo</th>
+              <th>Reproductor</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cancion of canciones | listafilter: searchText:searchField">
+          <td  (click)="ngDocheck(cancion)">{{cancion.anio}}</td>
+          <td  (click)="ngDocheck(cancion)">{{cancion.titulo}}</td>
+          <td  (click)="ngDocheck(cancion)">{{cancion.autor}}</td>
+          <td  (click)="ngDocheck(cancion)">{{cancion.estilo}}</td>
+          <td (click)="ngDoplay(cancion)"><i class="fa fa-play-circle fa-3x"></i></td>
       </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let cancion of canciones"  (click)="ngDocheck(cancion)">
-      <td>{{cancion.anio}}</td>
-      <td>{{cancion.titulo}}</td>
-      <td>{{cancion.autor}}</td>
-      <td>{{cancion.estilo}}</td>
-  </tr>
-</tbody>
+      </tbody>
+      </table>
+      </div>
+      <div style="display:inline-block;;width:25%;vertical-align: top;">
+        <app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
+        </div>
+        <div style="display:inline-block;;width:25%;vertical-align: top;">
+          <app-reproductor *ngIf="cancion_reproductor" src="{{cancion_reproductor.fichero}}" titulo="{{cancion_reproductor.titulo}}" autor="{{cancion_reproductor.autor}}" disco="{{cancion_reproductor.disco}}"></app-reproductor>
+          </div>
+  </div>
 
-</table>
 </div>
-<div style="display:inline-block;vertical-align: top;">
-<app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
-</div></div>
 
 
