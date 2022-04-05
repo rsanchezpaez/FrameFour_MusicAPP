@@ -8,7 +8,11 @@ import { CancionComponent } from './cancion/cancion.component';
 import { ListacancionComponent } from './canciones/listacancion/listacancion.component';
 import { FilterPipe } from './filter.pipe';
 import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 import { ReproductorComponent } from './reproductor/reproductor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,11 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
