@@ -14,6 +14,9 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { Scroll } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

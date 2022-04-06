@@ -1,3 +1,4 @@
+<!--
 <div>
     <div class="card"  style="right:-20px;width: 18rem;" *ngIf="src">
             <div class="card-body">
@@ -26,5 +27,38 @@
             </div>
     </div>
     </div>
-    
+-->
+<div class="container" style="width: 100%;height: 150px; border-color: black;border:solid; display: flex; flex-direction: row; " *ngIf="src">
+  <div class="container-details" style="width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+    <h5 class="card-title">{{titulo}}</h5>
+    <p class="card-text">{{autor}}</p>
+    <p class="card-text">{{disco}}</p>
+  </div>
 
+  <div class="container-progress-play"  style="width: 80%;display: flex; flex-direction: column; align-items: center; justify-content: center;  ">
+
+    <div class="container-progress" style="width: 90%;">
+      <progress #file id="file" max="100" value="0" style="width: 100%;"></progress>
+      <audio #audioElement src="http://localhost:4200/assets/{{src}}">
+        <p>Your browser does not support HTML5 audio. Here is a <a href="{{src}}">link</a> instead.</p>
+      </audio>
+      <div><span #momento value="0"></span></div>
+    </div>
+
+    <div class="container-play" style="display: flex; justify-content: center;">
+      <span (click)="play()">
+        <i class="fa fa-play-circle fa-3x"></i>
+      </span>&nbsp;&nbsp;
+      <span (click)="pause()">
+        <i class="fa fa-pause-circle fa-3x"></i>
+      </span>&nbsp;&nbsp;
+      <span (click)="stop()">
+        <i class="fa fa-stop-circle fa-3x"></i>
+      </span>
+    </div>
+
+  </div>
+   
+    
+  
+</div>
