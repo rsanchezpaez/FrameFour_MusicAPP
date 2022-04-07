@@ -18,7 +18,7 @@ export class ReproductorComponent implements AfterViewInit {
   @ViewChild('audioElement', { static: false }) 
   public _audioRef!: ElementRef;
   @ViewChild('file', { static: false }) 
-  public _file!: ElementRef;
+  public _file!: any;
   @ViewChild('momento', { static: false }) 
   public _momento!: ElementRef;
 
@@ -80,7 +80,7 @@ export class ReproductorComponent implements AfterViewInit {
         
         if(this.audio){
           if (this.audio.currentTime > 0) {            
-            value = Math.floor((100 / this.audio.duration) * this.audio.currentTime);
+            this._file.value = Math.floor((100 / this.audio.duration) * this.audio.currentTime);
             if (this._momento){this._momento.nativeElement.innerHTML = "<small><b>Duracion: "+Math.floor(this.audio.duration)+ " s -- Restante: "+Math.floor(this.audio.duration-this.audio.currentTime)+" s</b></small>";}
          }
         }

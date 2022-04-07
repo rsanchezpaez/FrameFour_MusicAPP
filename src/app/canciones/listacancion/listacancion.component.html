@@ -17,7 +17,11 @@
           [(ngModel)]="searchText" placeholder="Escriba texto a buscar" autofocus></mat-form-field>
 
       <div class="container-list-play" style=" padding: 5px; width: 100%;">
-
+        <div class="container-play">
+          <app-reproductor *ngIf="cancion_reproductor" src="{{cancion_reproductor.fichero}}"
+            titulo="{{cancion_reproductor.titulo}}" autor="{{cancion_reproductor.autor}}"
+            disco="{{cancion_reproductor.disco}}"></app-reproductor>
+        </div>
         <div class="container-list">
           <mat-selection-list multiple="false">
             <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="example-viewport">
@@ -40,11 +44,7 @@
           </mat-selection-list>
         </div>
 
-        <div class="container-play">
-          <app-reproductor *ngIf="cancion_reproductor" src="{{cancion_reproductor.fichero}}"
-            titulo="{{cancion_reproductor.titulo}}" autor="{{cancion_reproductor.autor}}"
-            disco="{{cancion_reproductor.disco}}"></app-reproductor>
-        </div>
+
 
       </div>
 
