@@ -7,5 +7,11 @@ new CancionModelo("Take Five", "The Dave Bruckek Quarter", 1959, "Time Out", "Ja
 new CancionModelo("Another One Bites The Dust", "Queen", 1980, "The Game", "Rock","imagen4.jpeg", "BMG Ariola","queen.mp3"),
 new CancionModelo("Come Together", "The Beatles", 1969, "Abbey Road", "Rock", "imagen1.jpeg", "Emi","come_together.mp3"),
 new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
+new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
+new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
+new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
+new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
+new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
+new CancionModelo("Nuages", "Django Reinhardt", 1953, "The great artistry", "Jazz", "imagen5.jpeg", "Clef" ,"nuages.mp3"),
 
 ]
