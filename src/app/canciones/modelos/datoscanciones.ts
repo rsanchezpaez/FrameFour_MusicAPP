@@ -28,5 +28,8 @@ new CancionModelo("Sing One", "George Strait", 1956, "Honky Tonk Time Machine", 
 new CancionModelo("Time of the Preacher", "Willie Nelson", 1975, "Red Headed Stranger", "Country", "imagen24.jpeg", "Sony Music Entertainment" ,"Time of the Preacher.mp3"),
 new CancionModelo("Out of Hand", "Gary Stewart", 1975, "Out Of Hand", "Country", "imagen25.jpeg", "Sony Music Entertainment" ,"Out of Hand.mp3"),
 new CancionModelo("Stand By Your Man", "Tammy Wynette", 1968, "Stand By Your Man", "Country", "imagen26.jpeg", "SONY BMG" ,"Stand By Your Man.mp3"),
+new CancionModelo("What A Friend We Have In Jesus", "Alan Jackson", 2006, "Precious Memories", "Gospel", "imagen27.jpeg", "EMI Records" ,"What A Friend We Have In Jesus.mp3"),
+new CancionModelo("Sympathy For The Devil", "The Rolling Stones", 1970, "Get Yer Ya-Ya's Out!", "Blues Rock", "imagen28.jpeg", "Decca Records" ,"Sympathy For The Devil.mp3"),
+new CancionModelo("To Beat the Devil", "Kris Kristofferson", 1970, "Kristofferson", "Country", "imagen29.jpeg", "SONY BMG" ,"To Beat the Devil.mp3"),
 
 ]
