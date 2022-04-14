@@ -10,10 +10,10 @@ import { CancionModelo } from '../canciones/modelos/cancion.modelo';
 })
 export class CancionComponent implements OnInit {
   @Input() cancion_individual?: CancionModelo;
-  constructor() { }
-cerrar(): void {
-  delete this.cancion_individual;
-}
+
+  cerrar(): void {
+    delete this.cancion_individual;
+  }
   ngOnInit(): void {
   }
 

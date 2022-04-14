@@ -1,9 +1,9 @@
-<div style="margin-top:20px;margin-left:20px; ">
+<div class="container-principal">
 
   <div class="content" role="main">
 
-    <div class="container-form-list" style="width: 70%; border-width: 0px;">
-      
+    <div class="container-form-list">
+
       <mat-form-field>
         <mat-label>Elija campo de búsqueda</mat-label>
         <select matNativeControl [(ngModel)]="searchField" [value]='searchField' required>
@@ -12,11 +12,11 @@
           <option value="titulo">Titulo</option>
         </select>
       </mat-form-field>
-      
+
       <mat-form-field><input matInput type="email" id="search-text" aria-describedby="search-text"
           [(ngModel)]="searchText" placeholder="Escriba texto a buscar" autofocus></mat-form-field>
 
-      <div class="container-list-play" style=" padding: 5px; width: 100%;">
+      <div class="container-list-play">
         <div class="container-play">
           <app-reproductor *ngIf="cancion_reproductor" src="{{cancion_reproductor.fichero}}"
             titulo="{{cancion_reproductor.titulo}}" autor="{{cancion_reproductor.autor}}"
@@ -44,59 +44,14 @@
           </mat-selection-list>
         </div>
 
-
-
       </div>
 
     </div>
-
-
-
-    <div style="width:5px;display:inline-block"></div>
-    <div class="container-detail" style="width:25%;">
+    <div class="container-principal-detail"></div>
+    <div class="container-detail">
       <app-cancion [cancion_individual]="cancion_selecionada"></app-cancion>
     </div>
 
   </div>
 
 </div>
-
-
-<!--
-        <mat-list>
-          <mat-list-item *ngFor="let cancion of canciones | listafilter: searchText:searchField">
-            <mat-icon (click)="ngDocheck(cancion)" matListIcon>info</mat-icon>
-            <mat-icon  (click)="ngDoplay(cancion)" matListIcon>radio</mat-icon>
-            <h3 matLine> {{cancion.anio}} </h3>
-            <p matLine>
-              <span> {{cancion.titulo}} </span>
-              <span class="demo-2"> -- {{cancion.autor}} </span>
-            </p>
-            
-          </mat-list-item>
-        </mat-list>
-  -->
-
-<!--
-      <table datatable class="row-border hover">
-  
-        <thead>
-            <tr>
-                <th>Año</th>
-                <th>Titulo</th>
-                <th>Autor</th>
-                <th>Estilo</th>
-                <th>Reproductor</th>
-            </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let cancion of canciones | listafilter: searchText:searchField">
-            <td  (click)="ngDocheck(cancion)">{{cancion.anio}}</td>
-            <td  (click)="ngDocheck(cancion)">{{cancion.titulo}}</td>
-            <td  (click)="ngDocheck(cancion)">{{cancion.autor}}</td>
-            <td  (click)="ngDocheck(cancion)">{{cancion.estilo}}</td>
-            <td><mat-icon  (click)="ngDoplay(cancion)">radio</mat-icon><mat-icon (click)="ngDocheck(cancion)">album</mat-icon></td>
-        </tr>
-        </tbody>
-        </table>
-        -->

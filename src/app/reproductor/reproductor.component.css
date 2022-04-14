@@ -1,10 +1,39 @@
-.hp_slide{
-    width:100%;
-    background:white;
-    height:25px;
+.container {
+    border-color: black;
+    border: solid;
+    display:
+        flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
 }
-.hp_range{
-    width:0;
-    background:black;
-    height:25px;
+
+.container-details {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+}
+
+.container-progress-play {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+.container-progress {
+    width: 90%
+}
+
+.container-play {
+    display: flex;
+    justify-content: center
+}
+
+.icon {
+    transform: scale(2);
+    margin-top: 20px
 }
