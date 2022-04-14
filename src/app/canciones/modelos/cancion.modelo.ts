@@ -1,6 +1,7 @@
 export class CancionModelo{
   
     constructor(
+      public id: string,
       public titulo: string,
       public autor: string,
       public anio: number,
