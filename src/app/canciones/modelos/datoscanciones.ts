@@ -31,5 +31,12 @@ new CancionModelo("Stand By Your Man", "Tammy Wynette", 1968, "Stand By Your Man
 new CancionModelo("What A Friend We Have In Jesus", "Alan Jackson", 2006, "Precious Memories", "Gospel", "imagen27.jpeg", "EMI Records" ,"What A Friend We Have In Jesus.mp3"),
 new CancionModelo("Sympathy For The Devil", "The Rolling Stones", 1970, "Get Yer Ya-Ya's Out!", "Blues Rock", "imagen28.jpeg", "Decca Records" ,"Sympathy For The Devil.mp3"),
 new CancionModelo("To Beat the Devil", "Kris Kristofferson", 1970, "Kristofferson", "Country", "imagen29.jpeg", "SONY BMG" ,"To Beat the Devil.mp3"),
-
+new CancionModelo("Солдат", "5'nizza", 2003, "Piatnica", "Country", "imagen30.jpeg", "MOON Records" ,"Солдат.mp3"),
+new CancionModelo("Ya Watani", "Marcel Khalife", 1984, "Arabism", "Singer", "imagen31.jpeg", "MOON Records" ,"Ya Watani.mp3"),
+new CancionModelo("抜刀隊", "Tayama Masakaju", 1885, "Battō-tai", "Military March", "imagen32.jpeg", "Japanese RECORDS" ,"抜刀隊.mp3"),
+new CancionModelo("I'm A Good Old Rebel", "Ry Cooder", 1980, "The Long Riders (Soundtrack)", "Country", "imagen33.jpeg", "OMP RECORDS" ,"I'm A Good Old Rebel.mp3"),
+new CancionModelo("Kjempene på Dovrefjell", "Folque", 1975, "På Dovrefjell", "Nordic", "imagen34.jpeg", "Phonogram A/S" ,"Kjempene på Dovrefjell.mp3"),
+new CancionModelo("If I Were A Rich Man", "John Williams", 2000, "Fiddler on the Roof", "Singer", "imagen35.jpeg", "Universal Music Group" ,"If I Were A Rich Man.mp3"),
+new CancionModelo("Who Only Europe Know", "Rome", 2000, "Le Ceneri Di Heliodoro", "Neofolk", "imagen36.jpeg", "Tristol Music Group" ,"Who Only Europe Know.mp3"),
+new CancionModelo("Apkārt Kalnu Gāju", "Vilkači", 2008, "Ko Kundziņi", "Neofolk", "imagen37.jpeg", "Lauska Records" ,"Apkārt Kalnu Gāju.mp3"),
 ]

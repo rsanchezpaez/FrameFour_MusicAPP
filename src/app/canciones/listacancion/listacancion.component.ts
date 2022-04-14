@@ -22,7 +22,6 @@ export class ListacancionComponent{
     this.searchField = 'autor'; 
   }
   
-
   ngDocheck(cancion: CancionModelo){
    this.cancion_selecionada=cancion; 
   }
