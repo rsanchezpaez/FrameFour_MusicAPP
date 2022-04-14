@@ -1,3 +1,4 @@
+<div class="container">
 <mat-card class="song-card" *ngIf="cancion_individual">
   <mat-card-header>
     <mat-card-title>{{cancion_individual.titulo}}</mat-card-title>
@@ -33,21 +34,4 @@
     <button mat-raised-button color="primary" (click)="cerrar()">Cerrar</button>
   </mat-card-content>
 </mat-card>
-
-<!--
-
-<div>
-<div class="card"  style="right:-20px;width: 18rem;" *ngIf="cancion_individual">
-
-        <img class="card-img-top" src="/assets/{{cancion_individual.caratula}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{cancion_individual.titulo}}</h5>
-          <p class="card-text">{{cancion_individual.autor}}</p>
-          <p class="card-text">{{cancion_individual.disco}}</p>
-          <p class="card-text">{{cancion_individual.estilo}}</p>
-          <a href="#" (click)=cerrar() class="btn btn-primary">Cerrar</a>
-        </div>
 </div>
-</div>
-  
--->
