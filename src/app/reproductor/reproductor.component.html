@@ -1,12 +1,13 @@
 
-<div class="container"  *ngIf="src">
-  <div class="container-details">
-    <p class="card-title"><b>{{titulo}}</b></p>
-    <p class="card-text">{{autor}}</p>
-    <p class="card-text">{{disco}}</p>
-  </div>
 
-  <div class="container-progress-play">
+<div class="container"  *ngIf="src">
+  <mat-card class="container-details">
+    <mat-card-title class="detail-text"><b>{{titulo}}</b></mat-card-title>
+    <mat-card-subtitle class="detail-text">{{autor}}</mat-card-subtitle>
+    <mat-card-subtitle class="detail-text">{{disco}}</mat-card-subtitle>
+  </mat-card>
+
+  <mat-card class="container-progress-play">
 
     <div class="container-progress">
       <mat-progress-bar #file id="file" max="100" value="0" mode="determinate"></mat-progress-bar>
@@ -30,7 +31,7 @@
       </span>
     </div>
 
-  </div>
+  </mat-card>
    
     
   

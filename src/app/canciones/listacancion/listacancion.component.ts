@@ -21,10 +21,12 @@ export class ListacancionComponent{
   
   ngDocheck(cancion: CancionModelo){
    this.cancion_selecionada=cancion; 
+   
   }
 
   ngDoplay(cancion: CancionModelo){
-    this.cancion_reproductor=cancion; 
+    this.cancion_reproductor=cancion;
+    this.cancion_selecionada=cancion; 
    }
   
 }

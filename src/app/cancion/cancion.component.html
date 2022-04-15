@@ -1,37 +1,37 @@
 <div class="container">
-<mat-card class="song-card" *ngIf="cancion_individual">
-  <mat-card-header>
-    <mat-card-title>{{cancion_individual.titulo}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src="/assets/{{cancion_individual.caratula}}" alt="sing image card">
-  <mat-card-content>
-    <mat-form-field appearence="legacy">
-      <mat-label>{{cancion_individual.titulo}}</mat-label>
-      <input matInput placeholder="{{cancion_individual.titulo}}">
-      <mat-icon matSuffix>create</mat-icon>
-    </mat-form-field>
-    <mat-form-field appearence="legacy">
-      <mat-label>{{cancion_individual.anio}}</mat-label>
-      <input matInput placeholder="{{cancion_individual.anio}}">
-      <mat-icon matSuffix>create</mat-icon>
-    </mat-form-field>
-    <mat-form-field appearence="legacy">
-      <mat-label>{{cancion_individual.autor}}</mat-label>
-      <input matInput placeholder="{{cancion_individual.autor}}">
-      <mat-icon matSuffix>create</mat-icon>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>{{cancion_individual.disco}}</mat-label>
-      <input matInput placeholder="{{cancion_individual.disco}}">
-      <mat-icon matSuffix>create</mat-icon>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>{{cancion_individual.estilo}}</mat-label>
-      <input matInput placeholder="{{cancion_individual.estilo}}">
-      <mat-icon matSuffix>create</mat-icon>
-    </mat-form-field>
-    <br>
-    <button mat-raised-button color="primary" (click)="cerrar()">Cerrar</button>
-  </mat-card-content>
-</mat-card>
+  <mat-card class="song-card" *ngIf="cancion_individual">
+    <mat-card-header>
+      <mat-card-title>{{cancion_individual.titulo}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/{{cancion_individual.caratula}}" alt="sing image card">
+    <mat-card-content>
+      <mat-form-field appearence="legacy">
+        <mat-label>{{cancion_individual.titulo}}</mat-label>
+        <input matInput placeholder="{{cancion_individual.titulo}}">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearence="legacy">
+        <mat-label>{{cancion_individual.anio}}</mat-label>
+        <input matInput placeholder="{{cancion_individual.anio}}">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearence="legacy">
+        <mat-label>{{cancion_individual.autor}}</mat-label>
+        <input matInput placeholder="{{cancion_individual.autor}}">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>{{cancion_individual.disco}}</mat-label>
+        <input matInput placeholder="{{cancion_individual.disco}}">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>{{cancion_individual.estilo}}</mat-label>
+        <input matInput placeholder="{{cancion_individual.estilo}}">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" (click)="cerrar()">Cerrar</button>
+    </mat-card-content>
+  </mat-card>
 </div>
