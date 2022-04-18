@@ -17,6 +17,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatListModule,
     MatCardModule,
     MatButtonModule,
+    MatSliderModule,
     ScrollingModule,
+    DragDropModule,
     MatProgressBarModule
   ],
   providers: [],

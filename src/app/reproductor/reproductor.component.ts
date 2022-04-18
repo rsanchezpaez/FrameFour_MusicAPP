@@ -20,9 +20,26 @@ export class ReproductorComponent implements AfterViewInit {
 
   public audio?: HTMLMediaElement;
   private songTime: any = 0;
+
+
+  autoTicks = false;
+  disabled = false;
+  invert = false;
+  max = 100;
+  min = 0;
+  showTicks = true;
+  step = 1;
+  thumbLabel = false;
+  value = 0;
+  vertical = false;
+  tickInterval = 1;
   
 
   public pause(): void {
+    console.log(this.audio?.currentTime)
+    this.audio!.currentTime += this.value
+    console.log(this.value)
+    console.log(this.audio?.currentTime)
     if (this.audio) {
       this.audio.pause();
     }
@@ -39,6 +56,10 @@ export class ReproductorComponent implements AfterViewInit {
 
   public play(): void {
     if (this.audio) {
+      if(this.value != 0 )
+      {
+        this.audio.currentTime = 50
+      }
       this.audio = this._audioRef.nativeElement;
       if (this.audio) {
         if (this.audio.readyState >= 2) {
@@ -48,6 +69,8 @@ export class ReproductorComponent implements AfterViewInit {
       }
     }
   }
+
+  
 
   public ngAfterViewInit(): void {
 
@@ -66,12 +89,19 @@ export class ReproductorComponent implements AfterViewInit {
           }
         }
 
-        if (this._file) {
+        this.value+=.1
+
+        /*if (this._file) {
           this._file.nativeElement.value = value;
-        }
+        }*/
       }, false);
 
     }
   }
+
+
+
+
+
 
 }

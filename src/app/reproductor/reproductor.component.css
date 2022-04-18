@@ -17,8 +17,6 @@
 }
 .detail-text{
   align-self: center;
-    
-    
 }
 
 .container-progress-play {
@@ -42,3 +40,9 @@
     transform: scale(2);
     margin-top: 20px
 }
+
+mat-slider {
+    width: 900px;
+    color: #000000;
+
+  }
