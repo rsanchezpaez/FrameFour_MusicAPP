@@ -22,56 +22,39 @@ export class ReproductorComponent implements AfterViewInit {
   private songTime: any = 0;
 
 
-  autoTicks = false;
-  disabled = false;
-  invert = false;
-  max = 100;
-  min = 0;
-  showTicks = true;
-  step = 1;
-  thumbLabel = false;
-  value = 0;
-  vertical = false;
-  tickInterval = 1;
-  
-
   public pause(): void {
-    console.log(this.audio?.currentTime)
-    this.audio!.currentTime += this.value
-    console.log(this.value)
-    console.log(this.audio?.currentTime)
+    console.log("click en pausa" + this.audio?.currentTime)
+    //this.audio!.currentTime += this.value
+    //console.log("valor pelotita" + this.value)
+    //console.log("segundo actual cancion" + this.audio?.currentTime)
     if (this.audio) {
       this.audio.pause();
     }
   }
 
   public stop(): void {
+    console.log("click en stop" + this.audio?.currentTime)
     if (this.audio) {
       this.audio.pause();
-      this.audio.currentTime = 0;
+      this.audio.currentTime = 0
+      this.value = 0;
       if (this._momento) { this._momento.nativeElement.innerHTML = "<small><b>Duracion: " + Math.floor(this.audio.duration) + " s -- Restante: " + Math.floor(this.audio.duration - this.audio.currentTime) + " s</b></small>"; }
 
     }
   }
 
   public play(): void {
+    console.log("click en play" + this.audio?.currentTime)
     if (this.audio) {
-      if(this.value != 0 )
-      {
-        this.audio.currentTime = 50
-      }
       this.audio = this._audioRef.nativeElement;
       if (this.audio) {
         if (this.audio.readyState >= 2) {
           this.audio.play();
-          
         }
       }
     }
   }
-
   
-
   public ngAfterViewInit(): void {
 
     this.audio = this._audioRef.nativeElement;
@@ -99,9 +82,47 @@ export class ReproductorComponent implements AfterViewInit {
     }
   }
 
+  
+  autoTicks = false;
+  disabled = false;
+  invert = false;
+  max = 100;
+  min = 0;
+  showTicks = false;
+  step = 1;
+  thumbLabel = false;
+  value = 0;
+  vertical = false;
+  tickInterval = 1;
 
+  public getSliderTickInterval(): void { //que punto de la canción debe empezar a reproducir al soltarse
+    this.audio = this._audioRef.nativeElement;
+    if (this.audio) {
+      this.playAtCurrentTime((this.audio.duration/100)*this.value)
+    }
+  }
+  
 
+  public playAtCurrentTime(currentTime?: number): void { //reproduce la canción en el lugar donde se suelte la pelotita
+    
+    if (this.audio) {
+      if(this.value != 0 )
+        this.audio = this._audioRef.nativeElement;
+      if (this.audio && this.audio.readyState >= 2) {
+        if(currentTime) {
+          this.audio.currentTime = currentTime
+        }
+        this.audio.play();
+  
+      }
+    }
+  }
 
+  public handlePlayer(): string{
+    return this.audio?.paused ? 'play_arrow' : 'pause'
+  }
 
-
+  public mute(): void{
+  if (this.audio) {this.audio.muted = !this.audio.muted}
+  }
 }

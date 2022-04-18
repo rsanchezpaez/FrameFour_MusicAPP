@@ -10,8 +10,7 @@
   <mat-card class="container-progress-play">
 
     <div class="container-progress">
-      <mat-slider #file role="slider" 
-      [(ngModel)]="value" id="file" max="100" step="0.5" value="0" mode="determinate"></mat-slider>
+      <mat-slider #file role="slider" (click)="getSliderTickInterval()" [(ngModel)]="value" id="file" max="100" step="0.5" value="0" mode="determinate"></mat-slider>
       
       <audio #audioElement src="http://localhost:4200/assets/{{src}}">
         <p>Your browser does not support HTML5 audio. Here is a <a href="{{src}}">link</a> instead.</p>
@@ -20,16 +19,18 @@
     </div>
 
     <div class="container-play">
-      <span (click)="play()">
-        <mat-icon class="icon">play_arrow</mat-icon>
-      </span>&nbsp;&nbsp;
-      <span (click)="pause()">
-        <mat-icon class="icon">pause</mat-icon>
+      <span (click)="audio?.paused ? play() : pause()">
+        <mat-icon *ngIf="audio && audio?.paused" class="icon">play_arrow</mat-icon>
+        <mat-icon *ngIf="audio && !audio?.paused" class="icon">pause</mat-icon>
       </span>&nbsp;&nbsp;
       <span (click)="stop()">
         <mat-icon class="icon">stop</mat-icon>
+      </span>&nbsp;&nbsp;
+      <span (click)="mute()">
+        <mat-icon *ngIf="audio?.muted" class="icon">volume_off</mat-icon>
+        <mat-icon *ngIf="!audio?.muted" class="icon">volume_up</mat-icon>
       </span>
-        
+
     </div>
 
   </mat-card>
