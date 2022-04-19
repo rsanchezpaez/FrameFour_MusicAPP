@@ -69,7 +69,18 @@ export class ReproductorComponent implements AfterViewInit {
           if (this.audio.currentTime > 0) {
             this._file.value = Math.floor((100 / this.audio.duration) * this.audio.currentTime);
             if (this._momento) { this._momento.nativeElement.innerHTML = "<small><b>Duracion: " + Math.floor(this.audio.duration) + " s -- Restante: " + Math.floor(this.audio.duration - this.audio.currentTime) + " s</b></small>"; }
-          }
+            if (Math.floor(this.audio.duration - this.audio.currentTime) == 0 ){
+              if (this._loop)
+              {
+                console.log('fin de la canción')
+                this.audio.currentTime = 0
+                this.value = 0
+                console.log('voy a llamar al play')
+                this.audio.play()
+  
+              }
+            }
+            }
         }
 
         this.value+=.1
@@ -94,6 +105,7 @@ export class ReproductorComponent implements AfterViewInit {
   value = 0;
   vertical = false;
   tickInterval = 1;
+  _loop:boolean = false
 
   public getSliderTickInterval(): void { //que punto de la canción debe empezar a reproducir al soltarse
     this.audio = this._audioRef.nativeElement;
@@ -125,4 +137,12 @@ export class ReproductorComponent implements AfterViewInit {
   public mute(): void{
   if (this.audio) {this.audio.muted = !this.audio.muted}
   }
+
+
+  public loop(): void{
+    this._loop = !this._loop
+  }
+
+
+
 }

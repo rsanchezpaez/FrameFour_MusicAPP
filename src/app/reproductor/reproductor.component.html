@@ -26,7 +26,11 @@
       <span (click)="stop()">
         <mat-icon class="icon">stop</mat-icon>
       </span>&nbsp;&nbsp;
-      <span (click)="mute()">
+      <span (click)="loop()">
+        <mat-icon *ngIf="_loop" class="icon">repeat_one</mat-icon>
+        <mat-icon *ngIf="!_loop" class="icon">repeat</mat-icon>
+      </span>&nbsp;&nbsp;
+      <span class="speaker" (click)="mute()">
         <mat-icon *ngIf="audio?.muted" class="icon">volume_off</mat-icon>
         <mat-icon *ngIf="!audio?.muted" class="icon">volume_up</mat-icon>
       </span>
