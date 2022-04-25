@@ -5,7 +5,7 @@
     </mat-card-header>
     <img mat-card-image src="/assets/{{cancion_individual.caratula}}" alt="sing image card">
     <mat-card-content>
-      <form novalidate [formGroup]="reactiveForm" (ngSubmit)="add(cancion_individual.id)"></form>
+      <form novalidate [formGroup]="reactiveForm" (ngSubmit)="add(cancion_individual.id)">
       <mat-form-field appearence="fill">
         <mat-label>{{cancion_individual.titulo}}</mat-label>
         <input matInput placeholder="{{cancion_individual.titulo}}" value="{{cancion_individual.titulo}}" formControlName="titulo">
@@ -33,6 +33,7 @@
       </mat-form-field>
       <br>
       <button mat-raised-button color="primary" (click)="add(cancion_individual.id)">Modificar</button>
+    </form>
     </mat-card-content>
   </mat-card>
 </div>

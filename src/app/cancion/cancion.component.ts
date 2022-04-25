@@ -38,6 +38,8 @@ export class CancionComponent {
       this.store.doc(`songs/${id}`).update({ autor: this.reactiveForm.get('autor')?.value });
     if (this.reactiveForm.get('estilo')?.value != '')
       this.store.doc(`songs/${id}`).update({ estilo: this.reactiveForm.get('estilo')?.value });
+      console.log("modificado")
+      console.log(this.reactiveForm.get('titulo')?.value)
 
   }
   cerrar(): void {
