@@ -5,33 +5,35 @@
     </mat-card-header>
     <img mat-card-image src="/assets/{{cancion_individual.caratula}}" alt="sing image card">
     <mat-card-content>
-      <mat-form-field appearence="legacy">
+      <form novalidate [formGroup]="reactiveForm" (ngSubmit)="add(cancion_individual.id)">
+      <mat-form-field appearence="fill">
         <mat-label>{{cancion_individual.titulo}}</mat-label>
-        <input matInput placeholder="{{cancion_individual.titulo}}">
+        <input matInput placeholder="{{cancion_individual.titulo}}" value="{{cancion_individual.titulo}}" formControlName="titulo">
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
       <mat-form-field appearence="legacy">
         <mat-label>{{cancion_individual.anio}}</mat-label>
-        <input matInput placeholder="{{cancion_individual.anio}}">
+        <input type="text" value= "{{cancion_individual.anio}}" formControlName="anio" matInput placeholder="{{cancion_individual.anio}}" >
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
       <mat-form-field appearence="legacy">
         <mat-label>{{cancion_individual.autor}}</mat-label>
-        <input matInput placeholder="{{cancion_individual.autor}}">
+        <input type="text" value= "{{cancion_individual.autor}}" formControlName="autor" matInput placeholder="{{cancion_individual.autor}}">
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
       <mat-form-field>
         <mat-label>{{cancion_individual.disco}}</mat-label>
-        <input matInput placeholder="{{cancion_individual.disco}}">
+        <input type="text" value= "{{cancion_individual.disco}}" formControlName="disco" matInput placeholder="{{cancion_individual.disco}}">
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
       <mat-form-field>
         <mat-label>{{cancion_individual.estilo}}</mat-label>
-        <input matInput placeholder="{{cancion_individual.estilo}}">
+        <input type="text" value= "{{cancion_individual.estilo}}" formControlName="estilo" matInput placeholder="{{cancion_individual.estilo}}">
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
       <br>
-      <button mat-raised-button color="primary" (click)="cerrar()">Cerrar</button>
+      <button mat-raised-button color="primary" (click)="add(cancion_individual.id)">Modificar</button>
+    </form>
     </mat-card-content>
   </mat-card>
 </div>

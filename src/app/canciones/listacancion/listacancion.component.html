@@ -25,7 +25,7 @@
         <div class="container-list">
           <mat-selection-list multiple="false">
             <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="example-viewport">
-              <mat-list-option *cdkVirtualFor="let cancion of canciones  |listafilter: searchText:searchField"
+              <mat-list-option *cdkVirtualFor="let cancion of dataSource  |listafilter: searchText:searchField"
                 class="example-item">
                 <div class="container-item">
                   <div class="child-item">
