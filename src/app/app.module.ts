@@ -59,11 +59,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     AngularFirestoreModule, // Only required for database features
     AngularFireAuthModule, // Only required for auth features,
     AngularFireStorageModule, // Only required for storage features
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
     DragDropModule,
     MatProgressBarModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

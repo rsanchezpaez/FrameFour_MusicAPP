@@ -25,7 +25,7 @@ export class ListacancionComponent {
   getAll() {
     this.store.collection('songs').snapshotChanges().subscribe((response) => {
       this.dataSource = response.map(item =>
-        Object.assign({ id: item.payload.doc.id }, item.payload.doc.data())
+        Object.assign({ id: item.payload.doc.id }, item.payload.doc.data())     
       );
     })
   }
